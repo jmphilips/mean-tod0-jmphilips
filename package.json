@@ -4,7 +4,7 @@
   "description": "A basic CRUD to-do app made in the Mean Stack",
   "main": "index.js",
   "scripts": {
-    "start": "node server/server.js"
+    "start": "node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/jmphilips/mean-tod0-jmphilips/issues"
   },
-  "homepage": "https://github.com/jmphilips/mean-tod0-jmphilips#readme"
+  "homepage": "https://github.com/jmphilips/mean-tod0-jmphilips#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
 }
