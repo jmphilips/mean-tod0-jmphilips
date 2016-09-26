@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title></title>
+        <title>My</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css">
     </head>
     <body>
-        <h1>It is working</h1>
+        <div ng-app="meantodo">
+            <div class="container">
+                <div ng-view></div>
+            </div>
+        </div>
+        <script src="/lib/angular/angular.min.js"></script>
+        <script src="/lib/angular-route/angular-route.min.js"></script>
+        <script src="/app/main.js"></script>
     </body>
 </html>
