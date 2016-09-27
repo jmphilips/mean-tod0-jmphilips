@@ -9,9 +9,32 @@ angular.module('meantodo', ['ngRoute'])
         })
     })
     .controller('MainCtrl', function($scope, $http) {
+        $scope.createNewTask = () => {
+            const tsk = {
+                "author": $scope.author,
+                "task": $scope.task
+            }
+
+            $http  
+                .post('/api/title', tsk)
+                .then(() => {$scope.tasks.push(tsk)})
+                .catch(console.error)
+        }
+
+        $scope.deleteTask = (objectId) => {
+            $http.delete('/api/title/' + objectId)
+
+            $http
+            .get('/api/title')
+            .then(({data: { tasks } }) => {
+                $scope.tasks = tasks
+            })
+        }
+
         $http
             .get('/api/title')
-            .then((data) => {
-                $scope.tasks = data
+            .then(({data: { tasks } }) => {
+                $scope.tasks = tasks
             })
+        
     })

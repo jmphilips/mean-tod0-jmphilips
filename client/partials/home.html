@@ -1,2 +1,11 @@
-<h1>what do you want TODO?</h1>
-<p ng-repeat="task in tasks.data.tasks">{{task.task}}</p>
+<h1>To-Dew</h1>
+<form ng-submit="createNewTask()">
+    <input type="text" ng-model="author" value="" placeholder="your name" />
+    <input type="text" ng-model="task" placeholder="task at hand" />
+    <input type="submit"/>
+</form>
+
+<div ng-repeat="task in tasks">
+    <p>{{task.author}}: {{task.task}}</p>
+    <a ng-click="deleteTask(task._id)">Delete</a>
+</div>
